@@ -77,23 +77,10 @@ namespace FrogcoinWallet
             CoresInput.Text = lastCoresAmount;
 
             // Repeating stuff
-            System.Timers.Timer refreshBalance = new System.Timers.Timer();
-            refreshBalance.Elapsed += (a, b) => DisplayWalletBalance();
-            refreshBalance.AutoReset = true;
-            refreshBalance.Interval = 10000; // Refresh every 10 seconds
-            refreshBalance.Start();
-
-            System.Timers.Timer refreshHPS = new System.Timers.Timer();
-            refreshHPS.Elapsed += (a, b) => RefreshHashingPower();
-            refreshHPS.AutoReset = true;
-            refreshHPS.Interval = 10000; // Refresh every 10 seconds
-            refreshHPS.Start();
-
-            System.Timers.Timer refreshConnectionCount = new System.Timers.Timer();
-            refreshHPS.Elapsed += (a, b) => ConnectionsLabel.Text = "Connections: " + RunCommand("getconnectioncount");
-            refreshHPS.AutoReset = true;
-            refreshHPS.Interval = 5 * 60000; // Refresh every 5 minutes
-            refreshHPS.Start();
+            DoEvery((a, b) => DisplayWalletBalance(), 10000); // Every ten seconds
+            DoEvery((a, b) => RefreshHashingPower(), 10000); // Every ten seconds
+            DoEvery((a, b) => ConnectionsLabel.Text = "Connections: " + RunCommand("getconnectioncount"), 1000 * 60); // Every minute
+            DoEvery((a, b) => DisplayTransactions(), 1000 * 60); // Every ten seconds
 
             // Transaction Stuff
             transactionAmounts = new Label[] { TransactionAmount1, TransactionAmount2, TransactionAmount3, TransactionAmount4, TransactionAmount5, TransactionAmount6 };
@@ -102,6 +89,20 @@ namespace FrogcoinWallet
             transactionIcons = new PictureBox[] { TransactionIcon1, TransactionIcon2, TransactionIcon3, TransactionIcon4, TransactionIcon5, TransactionIcon6 };
 
             DisplayTransactions();
+        }
+
+        private void DoEvery(System.Timers.ElapsedEventHandler action, int milliseconds)
+        {
+            DoEvery(action, milliseconds, true);
+        }
+
+        private void DoEvery(System.Timers.ElapsedEventHandler action, int milliseconds, bool autoReset)
+        {
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Elapsed += action;
+            timer.AutoReset = autoReset;
+            timer.Interval = milliseconds;
+            timer.Start();
         }
 
         private void CheckIfSynced()

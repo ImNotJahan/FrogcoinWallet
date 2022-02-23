@@ -208,7 +208,6 @@
             // 
             // QRButton
             // 
-            this.QRButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.QRButton.Location = new System.Drawing.Point(548, 16);
             this.QRButton.Name = "QRButton";
             this.QRButton.Size = new System.Drawing.Size(240, 23);
@@ -537,7 +536,6 @@
             // 
             // QRBox
             // 
-            this.QRBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.QRBox.Location = new System.Drawing.Point(548, 45);
             this.QRBox.Name = "QRBox";
             this.QRBox.Size = new System.Drawing.Size(240, 240);
@@ -624,6 +622,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.QRButton);
             this.Controls.Add(this.QRBox);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Frogcoin Wallet";
