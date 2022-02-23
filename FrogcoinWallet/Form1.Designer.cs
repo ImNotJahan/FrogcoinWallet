@@ -76,10 +76,11 @@
             this.TransactionAmount1 = new System.Windows.Forms.Label();
             this.QRBox = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.RPCCmdInput = new System.Windows.Forms.TextBox();
-            this.SendRPCButton = new System.Windows.Forms.Button();
             this.RPCOutput = new System.Windows.Forms.RichTextBox();
+            this.SendRPCButton = new System.Windows.Forms.Button();
+            this.RPCCmdInput = new System.Windows.Forms.TextBox();
             this.ConnectionsLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -558,29 +559,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Debug";
             // 
-            // RPCCmdInput
-            // 
-            this.RPCCmdInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RPCCmdInput.Location = new System.Drawing.Point(6, 18);
-            this.RPCCmdInput.Name = "RPCCmdInput";
-            this.RPCCmdInput.Size = new System.Drawing.Size(647, 22);
-            this.RPCCmdInput.TabIndex = 0;
-            // 
-            // SendRPCButton
-            // 
-            this.SendRPCButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SendRPCButton.Location = new System.Drawing.Point(657, 18);
-            this.SendRPCButton.Name = "SendRPCButton";
-            this.SendRPCButton.Size = new System.Drawing.Size(125, 23);
-            this.SendRPCButton.TabIndex = 2;
-            this.SendRPCButton.Text = "Send RPC";
-            this.SendRPCButton.UseVisualStyleBackColor = true;
-            this.SendRPCButton.Click += new System.EventHandler(this.SendRPCButton_Click);
-            // 
             // RPCOutput
             // 
             this.RPCOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -593,14 +571,43 @@
             this.RPCOutput.TabIndex = 3;
             this.RPCOutput.Text = "";
             // 
+            // SendRPCButton
+            // 
+            this.SendRPCButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SendRPCButton.Location = new System.Drawing.Point(657, 18);
+            this.SendRPCButton.Name = "SendRPCButton";
+            this.SendRPCButton.Size = new System.Drawing.Size(125, 23);
+            this.SendRPCButton.TabIndex = 2;
+            this.SendRPCButton.Text = "Send RPC";
+            this.SendRPCButton.UseVisualStyleBackColor = true;
+            this.SendRPCButton.Click += new System.EventHandler(this.SendRPCButton_Click);
+            // 
+            // RPCCmdInput
+            // 
+            this.RPCCmdInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RPCCmdInput.Location = new System.Drawing.Point(6, 18);
+            this.RPCCmdInput.Name = "RPCCmdInput";
+            this.RPCCmdInput.Size = new System.Drawing.Size(647, 22);
+            this.RPCCmdInput.TabIndex = 0;
+            // 
             // ConnectionsLabel
             // 
+            this.ConnectionsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ConnectionsLabel.AutoSize = true;
             this.ConnectionsLabel.Location = new System.Drawing.Point(3, 427);
             this.ConnectionsLabel.Name = "ConnectionsLabel";
             this.ConnectionsLabel.Size = new System.Drawing.Size(88, 17);
             this.ConnectionsLabel.TabIndex = 11;
             this.ConnectionsLabel.Text = "0 Connected";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(542, 290);
+            this.panel1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -613,9 +620,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.SyncedLabel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.QRButton);
             this.Controls.Add(this.QRBox);
-            this.Controls.Add(this.groupBox4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Frogcoin Wallet";
@@ -704,6 +712,7 @@
         private System.Windows.Forms.Button SendRPCButton;
         private System.Windows.Forms.TextBox RPCCmdInput;
         private System.Windows.Forms.Label ConnectionsLabel;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
