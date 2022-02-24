@@ -9,3 +9,5 @@ This is a windows GUI wallet for frogcoin wrapping around frogcoind.exe
 * Regenerate public address
 * View recent transactions
 * Run RPC commands from the wallet
+
+For more info check out the [discord](https://discord.gg/4ZZ3ARnuc8).
