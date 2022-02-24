@@ -158,7 +158,7 @@ namespace FrogcoinWallet
                     }
 
                     transactionAmounts[k].Text = (transaction.Amount > 0 ? "+" : "") + transaction.Amount + " FRG";
-                    transactionConfirmations[k].Text = transaction.Confirmations + " Confirmations";
+                    transactionConfirmations[k].Text = new DateTime(1970, 1, 1).AddSeconds(transaction.TimeReceived).ToLocalTime().ToString("yy/MM/dd HH:mm:ss");
                 }
             }
         }
@@ -345,11 +345,11 @@ namespace FrogcoinWallet
         public bool Generated { get; set; }
         public string BlockHash { get; set; }
         public int BlockTndex { get; set; }
-        public int BlockTime { get; set; }
+        public long BlockTime { get; set; }
         public string TXId { get; set; }
         public string NormTXId { get; set; }
-        public int Time { get; set; }
-        public int TimeRecieved { get; set; }
+        public long Time { get; set; }
+        public long TimeReceived { get; set; }
     }
 
     public class PeerInfo // Unused
@@ -374,7 +374,7 @@ namespace FrogcoinWallet
     {
         public string AddedNode { get; set; }
         public bool Connected { get; set; }
-        public List<NodeAddressInfo> addresses { get; set; }
+        public List<NodeAddressInfo> Addresses { get; set; }
     }
 
     public class NodeAddressInfo // Required by NodeInfo but unused
