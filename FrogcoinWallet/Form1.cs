@@ -21,6 +21,7 @@ namespace FrogcoinWallet
         private PictureBox[] transactionIcons;
 
         string basePath;
+        string configPath;
         bool isMining = false;
 
         public Form1()
@@ -28,7 +29,7 @@ namespace FrogcoinWallet
             basePath = AppContext.BaseDirectory;
 
             // Check if config file exists
-            string configPath = Environment.ExpandEnvironmentVariables(@"%appdata%\Frogcoin\frogcoin.conf");
+            configPath = Environment.ExpandEnvironmentVariables(@"%appdata%\Frogcoin\frogcoin.conf");
             string dirPath = Environment.ExpandEnvironmentVariables(@"%appdata%\Frogcoin\");
             if (!File.Exists(configPath))
             {
@@ -59,8 +60,7 @@ namespace FrogcoinWallet
             DisplayWalletBalance();
 
             // Moving stuff
-            List<AddressObject> addresses = StringToJSON<List<AddressObject>>(RunCommand("listreceivedbyaddress 0 true"));
-            recievingAddressBox.Text = addresses[0].Address;
+            recievingAddressBox.Text = GetPublicAddress();
 
             // Mining stuff
             MiningInfoObject miningInfo = StringToJSON<MiningInfoObject>(RunCommand("getmininginfo"));
@@ -80,7 +80,7 @@ namespace FrogcoinWallet
             DoEvery((a, b) => DisplayWalletBalance(), 10000); // Every ten seconds
             DoEvery((a, b) => RefreshHashingPower(), 10000); // Every ten seconds
             DoEvery((a, b) => ConnectionsLabel.Text = "Connections: " + RunCommand("getconnectioncount"), 1000 * 60); // Every minute
-            DoEvery((a, b) => DisplayTransactions(), 1000 * 60); // Every ten seconds
+            DoEvery((a, b) => DisplayTransactions(), 10000); // Every ten seconds
 
             // Transaction Stuff
             transactionAmounts = new Label[] { TransactionAmount1, TransactionAmount2, TransactionAmount3, TransactionAmount4, TransactionAmount5, TransactionAmount6 };
@@ -308,6 +308,39 @@ namespace FrogcoinWallet
         private void SendRPCButton_Click(object sender, EventArgs e)
         {
             RPCOutput.Text = RunCommand(RPCCmdInput.Text);
+        }
+
+        private string GetPublicAddress()
+        {
+            return StringToJSON<List<AddressObject>>(RunCommand("listreceivedbyaddress 0 true"))[0].Address;
+        }
+
+        private void wordGuideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new About().ShowDialog();
+        }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Preferences().ShowDialog();
+        }
+
+        private void viewPrivateKeyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CopyDisplay privateKeyDisplay = new CopyDisplay();
+            privateKeyDisplay.Text = "Private Key";
+            privateKeyDisplay.TextBox.Text = RunCommand("dumpprivkey " + GetPublicAddress());
+            privateKeyDisplay.ShowDialog();
+        }
+
+        private void editFrogcoinconfToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe", configPath);
         }
     }
 

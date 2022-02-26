@@ -81,6 +81,15 @@
             this.RPCCmdInput = new System.Windows.Forms.TextBox();
             this.ConnectionsLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wordGuideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPrivateKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editFrogcoinconfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TransactionIcon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QRBox)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SendingToAddress
@@ -128,7 +138,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.SendFrogcoin);
             this.groupBox1.Controls.Add(this.SendingToAddress);
-            this.groupBox1.Location = new System.Drawing.Point(12, 82);
+            this.groupBox1.Location = new System.Drawing.Point(12, 96);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(530, 135);
             this.groupBox1.TabIndex = 3;
@@ -208,7 +218,7 @@
             // 
             // QRButton
             // 
-            this.QRButton.Location = new System.Drawing.Point(548, 16);
+            this.QRButton.Location = new System.Drawing.Point(548, 30);
             this.QRButton.Name = "QRButton";
             this.QRButton.Size = new System.Drawing.Size(240, 23);
             this.QRButton.TabIndex = 8;
@@ -248,7 +258,7 @@
             this.groupBox2.Controls.Add(this.ConfirmedLabel);
             this.groupBox2.Controls.Add(this.ImmatureLabel);
             this.groupBox2.Controls.Add(this.UnconfirmedLabel);
-            this.groupBox2.Location = new System.Drawing.Point(12, 13);
+            this.groupBox2.Location = new System.Drawing.Point(12, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(530, 69);
             this.groupBox2.TabIndex = 9;
@@ -261,7 +271,7 @@
             this.groupBox3.Controls.Add(this.CoresInput);
             this.groupBox3.Controls.Add(this.MiningButton);
             this.groupBox3.Controls.Add(this.hashingPowerLabel);
-            this.groupBox3.Location = new System.Drawing.Point(12, 223);
+            this.groupBox3.Location = new System.Drawing.Point(12, 237);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(524, 75);
             this.groupBox3.TabIndex = 10;
@@ -290,7 +300,7 @@
             // SyncedLabel
             // 
             this.SyncedLabel.AutoSize = true;
-            this.SyncedLabel.Location = new System.Drawing.Point(12, 404);
+            this.SyncedLabel.Location = new System.Drawing.Point(12, 418);
             this.SyncedLabel.Name = "SyncedLabel";
             this.SyncedLabel.Size = new System.Drawing.Size(0, 17);
             this.SyncedLabel.TabIndex = 12;
@@ -305,7 +315,7 @@
             this.groupBox4.Controls.Add(this.Transaction3);
             this.groupBox4.Controls.Add(this.Transaction2);
             this.groupBox4.Controls.Add(this.Transaction1);
-            this.groupBox4.Location = new System.Drawing.Point(794, 13);
+            this.groupBox4.Location = new System.Drawing.Point(794, 27);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(221, 444);
             this.groupBox4.TabIndex = 13;
@@ -536,7 +546,7 @@
             // 
             // QRBox
             // 
-            this.QRBox.Location = new System.Drawing.Point(548, 45);
+            this.QRBox.Location = new System.Drawing.Point(548, 59);
             this.QRBox.Name = "QRBox";
             this.QRBox.Size = new System.Drawing.Size(240, 240);
             this.QRBox.TabIndex = 7;
@@ -550,9 +560,9 @@
             this.groupBox5.Controls.Add(this.RPCOutput);
             this.groupBox5.Controls.Add(this.SendRPCButton);
             this.groupBox5.Controls.Add(this.RPCCmdInput);
-            this.groupBox5.Location = new System.Drawing.Point(0, 308);
+            this.groupBox5.Location = new System.Drawing.Point(0, 322);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(788, 116);
+            this.groupBox5.Size = new System.Drawing.Size(788, 119);
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Debug";
@@ -565,7 +575,7 @@
             this.RPCOutput.Location = new System.Drawing.Point(6, 51);
             this.RPCOutput.Name = "RPCOutput";
             this.RPCOutput.ReadOnly = true;
-            this.RPCOutput.Size = new System.Drawing.Size(776, 59);
+            this.RPCOutput.Size = new System.Drawing.Size(776, 62);
             this.RPCOutput.TabIndex = 3;
             this.RPCOutput.Text = "";
             // 
@@ -594,7 +604,7 @@
             // 
             this.ConnectionsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ConnectionsLabel.AutoSize = true;
-            this.ConnectionsLabel.Location = new System.Drawing.Point(3, 427);
+            this.ConnectionsLabel.Location = new System.Drawing.Point(3, 444);
             this.ConnectionsLabel.Name = "ConnectionsLabel";
             this.ConnectionsLabel.Size = new System.Drawing.Size(88, 17);
             this.ConnectionsLabel.TabIndex = 11;
@@ -602,16 +612,91 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(542, 290);
             this.panel1.TabIndex = 3;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1027, 28);
+            this.menuStrip1.TabIndex = 15;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewPrivateKeyToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editFrogcoinconfToolStripMenuItem,
+            this.preferencesToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wordGuideToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // wordGuideToolStripMenuItem
+            // 
+            this.wordGuideToolStripMenuItem.Name = "wordGuideToolStripMenuItem";
+            this.wordGuideToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.wordGuideToolStripMenuItem.Text = "Word Guide";
+            this.wordGuideToolStripMenuItem.Click += new System.EventHandler(this.wordGuideToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // viewPrivateKeyToolStripMenuItem
+            // 
+            this.viewPrivateKeyToolStripMenuItem.Name = "viewPrivateKeyToolStripMenuItem";
+            this.viewPrivateKeyToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.viewPrivateKeyToolStripMenuItem.Text = "View Private Key";
+            this.viewPrivateKeyToolStripMenuItem.Click += new System.EventHandler(this.viewPrivateKeyToolStripMenuItem_Click);
+            // 
+            // editFrogcoinconfToolStripMenuItem
+            // 
+            this.editFrogcoinconfToolStripMenuItem.Name = "editFrogcoinconfToolStripMenuItem";
+            this.editFrogcoinconfToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.editFrogcoinconfToolStripMenuItem.Text = "Edit frogcoin.conf";
+            this.editFrogcoinconfToolStripMenuItem.Click += new System.EventHandler(this.editFrogcoinconfToolStripMenuItem_Click);
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 450);
+            this.ClientSize = new System.Drawing.Size(1027, 465);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.ConnectionsLabel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -624,6 +709,7 @@
             this.Controls.Add(this.QRBox);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Frogcoin Wallet";
             this.groupBox1.ResumeLayout(false);
@@ -654,6 +740,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.QRBox)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -712,6 +800,15 @@
         private System.Windows.Forms.TextBox RPCCmdInput;
         private System.Windows.Forms.Label ConnectionsLabel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wordGuideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewPrivateKeyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editFrogcoinconfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
     }
 }
 

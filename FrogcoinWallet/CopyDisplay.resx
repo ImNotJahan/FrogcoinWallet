@@ -118,33 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TransactionIcon5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAX5JREFUaEPtlr+Kg0AQxo2JWqRIGsEXsLYRQUggL5A3sLeztRAEq3R2gp2dnc+4
-        5+yteyaanF5W4h7zg2H/KDvfp+OuCoIgCIIgCPKUKIrIZrMhlmURNiUXIL5t7kJVVXI4HMjlcqHj3W5H
-        mqaB/roA8SC27U4OuB+iKAoYf54sy7g4TdM6UXxuRnwMKgDehm3bxPO8R2FzYnm22y0V23bv2sdS6q7N
-        jGVxXZeAgb4JUXE+n6FdBt/3eaIH4QNut9vAnGEYUz/2vxOG4WABXdd5efQFHI/HycmqqhoTP8ara/Nh
-        OwoN9kTfha/HggNvqDszoDy/Z9+krmueiD1BITCBg/Ucx+nmheVS8jwXt9gP/ZJ6xhJ5xRDHMRUPvxfQ
-        0skRoISFlZNortdrJ/6lidXz25YsA3ybZmPpIN1Zw8byMHK4yWfCNM27U74sS/lMAPv9nhqQ+VugJQXb
-        axAE8poA0jQlSZLIbQI4nU7ym2j5FyYQBEEQBEEQBFkBivIFmjn0MNvhKCcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="TransactionIcon2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAX5JREFUaEPtlr+Kg0AQxo2JWqRIGsEXsLYRQUggL5A3sLeztRAEq3R2gp2dnc+4
-        5+yteyaanF5W4h7zg2H/KDvfp+OuCoIgCIIgCPKUKIrIZrMhlmURNiUXIL5t7kJVVXI4HMjlcqHj3W5H
-        mqaB/roA8SC27U4OuB+iKAoYf54sy7g4TdM6UXxuRnwMKgDehm3bxPO8R2FzYnm22y0V23bv2sdS6q7N
-        jGVxXZeAgb4JUXE+n6FdBt/3eaIH4QNut9vAnGEYUz/2vxOG4WABXdd5efQFHI/HycmqqhoTP8ara/Nh
-        OwoN9kTfha/HggNvqDszoDy/Z9+krmueiD1BITCBg/Ucx+nmheVS8jwXt9gP/ZJ6xhJ5xRDHMRUPvxfQ
-        0skRoISFlZNortdrJ/6lidXz25YsA3ybZmPpIN1Zw8byMHK4yWfCNM27U74sS/lMAPv9nhqQ+VugJQXb
-        axAE8poA0jQlSZLIbQI4nU7ym2j5FyYQBEEQBEEQBFkBivIFmjn0MNvhKCcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAAMMOAADDDgAAAAAAAAAA
